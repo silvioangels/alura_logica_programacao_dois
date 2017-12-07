@@ -1,0 +1,33 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    //retangulo verde
+    pincel.fillStyle = 'green';
+    pincel.fillRect(50,0,300,200);
+
+    //triangulo amarelo superior
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(200, 25);
+    pincel.lineTo(75,100);
+    pincel.lineTo(325 ,100);
+    pincel.fill();
+
+    //triangulo amarelo inferior
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(200, 175);
+    pincel.lineTo(75,100);
+    pincel.lineTo(325 ,100);
+    pincel.fill();
+
+     pincel.fillStyle = 'darkblue';
+     pincel.beginPath();
+     pincel.arc(200, 100, 50, 0, 2*3.14);
+     pincel.fill();
+
+</script>
