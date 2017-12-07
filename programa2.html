@@ -2,18 +2,18 @@
 
 <script>
 
-    function desenhaQuadradoVerde() {
-        pincel.fillStyle = 'green';
-        pincel.fillRect(0,0, 50, 50);
+    function desenhaQuadrado(x,y, cor) {
+        pincel.fillStyle = cor;
+        pincel.fillRect(x,y, 50, 50);
         pincel.fillStroke = 'black';
-        pincel.strokeRect(0,0, 50, 50);
+        pincel.strokeRect(x,y, 50, 50);
     }
 
     var tela = document.querySelector('canvas');
     var pincel = tela.getContext('2d');
 
-    desenhaQuadradoVerde();
-    desenhaQuadradoVerde();
-    desenhaQuadradoVerde();
+    desenhaQuadrado(0, 0, 'green');
+    desenhaQuadrado(50, 0, 'green');
+    desenhaQuadrado(100, 0, 'green');
 
 </script>
