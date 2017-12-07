@@ -17,8 +17,7 @@
     var direita = 39;
     var baixo = 40;
 
-    // taxa de incremento
-    var taxa = 5;
+    var taxa = 10;
 
     function desenhaCirculo(x, y, raio) {
 
@@ -43,15 +42,23 @@
 
     function leDoTeclado(evento) {
 
-        if(evento.keyCode == esquerda){
-            x--;
-        }else if (evento.keyCode == direita){
-            x++;
-        }else if (evento.keyCode == cima){
-            y--;
-        }else if (evento.keyCode == baixo){
-            y++;
-        }
+      if(evento.keyCode == cima) {
+
+          y = y - taxa;
+
+      } else if (evento.keyCode == baixo) {
+
+          y = y + taxa;
+
+      } else if (evento.keyCode == esquerda) {
+
+          x = x - taxa;
+
+      } else if (evento.keyCode == direita) {
+
+          x = x + taxa;
+      }
+
     }
 
    document.onkeydown = leDoTeclado;
